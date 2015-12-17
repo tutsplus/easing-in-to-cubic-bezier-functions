@@ -1,0 +1,30 @@
+@import "../page-styles.css";
+
+.container {
+	width:550px;
+	margin:50px auto;
+	border:2px dashed;
+}
+.box {
+	position:relative;
+	width:100px;
+	height:100px;
+	border:2px solid;
+	transition:all 0.3s ease;
+	animation: move 4s infinite alternate;
+}
+@keyframes move {
+	from { left: 0; }
+	to   { left: calc( 100% - 104px ); }
+}
+.box:hover {
+	background:#eee;
+}
+.box--red {
+	background:#f92772;
+	animation-timing-function:linear;
+}
+.box--blue {
+	background:#66d9ef;
+	animation-timing-function:ease-in-out;
+}
